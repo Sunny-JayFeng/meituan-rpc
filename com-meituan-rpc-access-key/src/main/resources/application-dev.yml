@@ -3,7 +3,7 @@ spring:
   # 数据库配置 -- 写数据库
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/meituan_manager_access_key?characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3306/meituan_manager?characterEncoding=utf-8
     username: root
     password: root130626
     # 配置 druid 连接池

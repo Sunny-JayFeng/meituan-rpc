@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @date 2021/4/4
  */
 @Slf4j
-@DubboService(version = "1.0.1")
+@DubboService(version = "1.0.2")
 public class RPCAccessKeyServiceImpl implements RPCAccessKeyService {
 
     @Autowired

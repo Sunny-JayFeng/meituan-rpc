@@ -11,7 +11,7 @@ import java.util.Map;
  * @author JayFeng
  * @date 2021/4/4
  */
-@DubboService(version = "1.0.0")
+@DubboService(version = "1.0.2")
 public interface RPCAccessKeyService {
 
     void initAllAccessKeyList();
