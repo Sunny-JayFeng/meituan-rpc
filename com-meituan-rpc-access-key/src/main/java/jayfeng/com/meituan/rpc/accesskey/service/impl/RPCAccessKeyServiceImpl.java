@@ -1,4 +1,4 @@
-package jayfeng.com.meituan.rpc.accesskey.service;
+package jayfeng.com.meituan.rpc.accesskey.service.impl;
 
 import jayfeng.com.meituan.rpc.accesskey.bean.AccessKey;
 import jayfeng.com.meituan.rpc.accesskey.dao.AccessKeyDao;
