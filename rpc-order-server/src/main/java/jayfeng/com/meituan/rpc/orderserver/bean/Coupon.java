@@ -31,21 +31,28 @@ public class Coupon {
     private String couponName;
 
     /**
+     * 是否可叠加使用
+     * 0 -- 否
+     * 1 -- 是
+     */
+    private Byte canSuperimposeUse;
+
+    /**
      * 使用规则
      */
     private String useRule;
 
     /**
-     * 有效时间
+     * 有效时间(多长时间)
      */
     private Long validTime;
 
     /**
-     * 状态
+     * 是否有效
      * 0 -- 失效
      * 1 -- 有效
      */
-    private Integer status;
+    private Integer isValid;
 
     /**
      * 创建时间

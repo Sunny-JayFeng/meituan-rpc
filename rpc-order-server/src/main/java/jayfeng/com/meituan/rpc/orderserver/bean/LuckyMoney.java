@@ -26,9 +26,9 @@ public class LuckyMoney {
     private String name;
 
     /**
-     * 有效期至
+     * 有效时间(多长时间)
      */
-    private Long validDate;
+    private Long validTime;
 
     /**
      * 金额

@@ -93,6 +93,11 @@ public class Order {
     private Integer luckyMoneyId;
 
     /**
+     * 用户红包 id
+     */
+    private Integer userLuckyMoneyId;
+
+    /**
      * 满减优惠
      */
     private Float fullDiscount;
@@ -107,6 +112,12 @@ public class Order {
      * 1,2,3,4,5 英文逗号分隔
      */
     private String couponIds;
+
+    /**
+     * 用户使用的优惠券 id
+     * 1,2,3,4,5 英文逗号分隔
+     */
+    private String userCouponIds;
 
     /**
      * 总费用

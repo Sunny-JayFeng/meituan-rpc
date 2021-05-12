@@ -1,12 +1,12 @@
-package jayfeng.com.meituan.rpc.orderserver.dao;
+package jayfeng.com.meituan.rpc.orderserver.dao.discount;
 
 import org.springframework.stereotype.Repository;
 
 /**
- * 订单持久层
+ * 红包持久层
  * @author JayFeng
  * @date 2021/5/10
  */
 @Repository
-public interface OrderDao {
+public interface LuckyMoneyDao {
 }

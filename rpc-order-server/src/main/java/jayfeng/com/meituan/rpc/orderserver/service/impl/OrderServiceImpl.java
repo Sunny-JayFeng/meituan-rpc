@@ -17,6 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.LinkedList;
 import java.util.concurrent.*;
 
+/**
+ * 订单创建服务
+ * @author JayFeng
+ * @date 2021/5/10
+ */
 @Slf4j
 @DubboService(version = "1.0.0")
 public class OrderServiceImpl implements OrderService {
@@ -55,7 +60,7 @@ public class OrderServiceImpl implements OrderService {
         Future<Boolean> deductLuckyMoneyResult = null;
         Future<Boolean> deductCouponResult = null;
         // 提交扣除津贴任务
-        if (order.getAllowanceDiscount() != 0) {
+        if (order.getAllowanceDiscount() > 0) {
             deductAllowanceResult = threadPoolExecutor.submit(new Callable<Boolean>() {
                 @Override
                 public Boolean call() throws Exception {
@@ -69,7 +74,7 @@ public class OrderServiceImpl implements OrderService {
             deductLuckyMoneyResult = threadPoolExecutor.submit(new Callable<Boolean>() {
                 @Override
                 public Boolean call() throws Exception {
-                    return luckyMoneyService.deductionUserLuckyMoney(user, order.getLuckyMoneyId());
+                    return luckyMoneyService.deductionUserLuckyMoney(user, order.getUserLuckyMoneyId());
                 }
             });
         }
@@ -79,7 +84,7 @@ public class OrderServiceImpl implements OrderService {
             deductCouponResult = threadPoolExecutor.submit(new Callable<Boolean>() {
                 @Override
                 public Boolean call() throws Exception {
-                    return couponService.deductionUserCoupon(user, order.getCouponIds());
+                    return couponService.deductionUserCoupon(user, order.getUserCouponIds());
                 }
             });
         }

@@ -3,12 +3,12 @@ package jayfeng.com.meituan.rpc.orderserver.bean;
 import lombok.Data;
 
 /**
- * 用户津贴实体类
+ * 用户有效优惠券
  * @author JayFeng
- * @date 2021/5/10
+ * @date 2021/5/11
  */
 @Data
-public class Allowance {
+public class UserCoupon {
 
     /**
      * id
@@ -21,20 +21,22 @@ public class Allowance {
     private Integer userId;
 
     /**
-     * 金额
+     * 优惠券 id
      */
-    private Float money;
+    private Integer couponId;
 
     /**
-     * 有效时间(多长时间)
+     * 状态
+     * 0 -- 有效
+     * 1 -- 已使用
+     * 2 -- 已过期
+     */
+    private Byte status;
+
+    /**
+     * 有效期至
      */
     private Long validTime;
-
-    /**
-     * 说明
-     * 津贴可与满减、折扣商品、红包叠加使用
-     */
-    private String explain;
 
     /**
      * 创建时间

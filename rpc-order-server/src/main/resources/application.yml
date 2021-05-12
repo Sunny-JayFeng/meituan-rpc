@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: rpc-manager-order-server-provider
+
+server:
+  port: 10000
